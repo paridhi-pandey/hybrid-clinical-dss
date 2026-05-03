@@ -2,6 +2,10 @@ import streamlit as st
 import os
 import sys
 import joblib
+import sys
+import pkg_resources
+
+st.write([pkg.key for pkg in pkg_resources.working_set])
 
 # Add src to path safely
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
